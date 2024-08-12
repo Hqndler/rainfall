@@ -1,0 +1,27 @@
+│0x80484a4 <v>           push   %ebp                                        │   
+│0x80484a5 <v+1>         mov    %esp,%ebp                                   │   
+│0x80484a7 <v+3>         sub    $0x218,%esp                                 │   
+│0x80484ad <v+9>         mov    0x8049860,%eax                              │   
+│0x80484b2 <v+14>        mov    %eax,0x8(%esp)                              │   
+│0x80484b6 <v+18>        movl   $0x200,0x4(%esp)                            │   
+│0x80484be <v+26>        lea    -0x208(%ebp),%eax                           │ 
+│0x80484c4 <v+32>        mov    %eax,(%esp)                                 │   
+│0x80484c7 <v+35>        call   0x80483a0 <fgets@plt>                       │   
+│0x80484cc <v+40>        lea    -0x208(%ebp),%eax                           │   
+│0x80484d2 <v+46>        mov    %eax,(%esp)                                 │   
+│0x80484d5 <v+49>        call   0x8048390 <printf@plt>                      │   
+│0x80484da <v+54>        mov    0x804988c,%eax                              │   
+│0x80484df <v+59>        cmp    $0x40,%eax                                  │   
+│0x80484e2 <v+62>        jne    0x8048518 <v+116>                           │   
+│0x80484e4 <v+64>        mov    0x8049880,%eax                              │   
+│0x80484e9 <v+69>        mov    %eax,%edx                                   │   
+│0x80484eb <v+71>        mov    $0x8048600,%eax                             │   
+│0x80484f0 <v+76>        mov    %edx,0xc(%esp)                              │   
+│0x80484f4 <v+80>        movl   $0xc,0x8(%esp)                              │   
+│0x80484fc <v+88>        movl   $0x1,0x4(%esp)                              │
+│0x8048504 <v+96>        mov    %eax,(%esp)                                 │   
+│0x8048507 <v+99>        call   0x80483b0 <fwrite@plt>                      │   
+│0x804850c <v+104>       movl   $0x804860d,(%esp)                           │   
+│0x8048513 <v+111>       call   0x80483c0 <system@plt>                      │   
+│0x8048518 <v+116>       leave                                              │   
+│0x8048519 <v+117>       ret                                                │

@@ -1,0 +1,22 @@
+   │0x8048457 <n>           push   %ebp                      │   
+   │0x8048458 <n+1>         mov    %esp,%ebp                 │   
+   │0x804845a <n+3>         sub    $0x218,%esp               │
+   │0x8048460 <n+9>         mov    0x8049804,%eax            │   
+   │0x8048465 <n+14>        mov    %eax,0x8(%esp)            │   
+   │0x8048469 <n+18>        movl   $0x200,0x4(%esp)          │   
+   │0x8048471 <n+26>        lea    -0x208(%ebp),%eax         │   
+   │0x8048477 <n+32>        mov    %eax,(%esp)               │   
+   │0x804847a <n+35>        call   0x8048350 <fgets@plt>     │   
+   │0x804847f <n+40>        lea    -0x208(%ebp),%eax         │   
+   │0x8048485 <n+46>        mov    %eax,(%esp)               │   
+   │0x8048488 <n+49>        call   0x8048444 <p>             │   
+   │0x804848d <n+54>        mov    0x8049810,%eax            │   
+   │0x8048492 <n+59>        cmp    $0x1025544,%eax           │   
+   │0x8048497 <n+64>        jne    0x80484a5 <n+78>          │   
+   │0x8048499 <n+66>        movl   $0x8048590,(%esp)         │   
+   │0x80484a0 <n+73>        call   0x8048360 <system@plt>    │   
+   │0x80484a5 <n+78>        leave                            │   
+   │0x80484a6 <n+79>        ret                              │
+
+(gdb) x/s 0x8048590
+0x8048590:       "/bin/cat /home/user/level5/.pass"
