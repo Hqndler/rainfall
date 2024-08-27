@@ -14,7 +14,7 @@ Segmentation fault (core dumped)
 
 Illegal instruction is the proof there's an overflow, so we will attack with a buffer overflow of 76.
 
-Knowing why it's 76 can be good, it guess the buffer is 64bytes long (char buffer[64]) and it took 12 more bytes to reach the return adresse of gets
+Knowing why it's 76 can be good, it guess the buffer is 64 bytes long (char buffer[64]) and it took 12 more bytes to reach the return adresse of gets
 
 GDB dissas
 ```
@@ -56,7 +56,7 @@ End of assembler dump.
 
 run is a function but is not called, no big deal we got everything !
 
-/bin/sh will be called with system, that's exactly what we want and the address that starts this is **0x08048444**.
+"/bin/sh" will be called with system, that's exactly what we want and the address that starts this is **0x08048444**.
 
 so by overflowing the buffer and calling the right address like this (adress is reversed because it's like this cpu reads adresses)
 
