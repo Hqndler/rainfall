@@ -1,22 +1,22 @@
-   │0x8048457 <n>           push   %ebp                      │   
-   │0x8048458 <n+1>         mov    %esp,%ebp                 │   
-   │0x804845a <n+3>         sub    $0x218,%esp               │
-   │0x8048460 <n+9>         mov    0x8049804,%eax            │   
-   │0x8048465 <n+14>        mov    %eax,0x8(%esp)            │   
-   │0x8048469 <n+18>        movl   $0x200,0x4(%esp)          │   
-   │0x8048471 <n+26>        lea    -0x208(%ebp),%eax         │   
-   │0x8048477 <n+32>        mov    %eax,(%esp)               │   
-   │0x804847a <n+35>        call   0x8048350 <fgets@plt>     │   
-   │0x804847f <n+40>        lea    -0x208(%ebp),%eax         │   
-   │0x8048485 <n+46>        mov    %eax,(%esp)               │   
-   │0x8048488 <n+49>        call   0x8048444 <p>             │   
-   │0x804848d <n+54>        mov    0x8049810,%eax            │   
-   │0x8048492 <n+59>        cmp    $0x1025544,%eax           │   
-   │0x8048497 <n+64>        jne    0x80484a5 <n+78>          │   
-   │0x8048499 <n+66>        movl   $0x8048590,(%esp)         │   
-   │0x80484a0 <n+73>        call   0x8048360 <system@plt>    │   
-   │0x80484a5 <n+78>        leave                            │   
-   │0x80484a6 <n+79>        ret                              │
+0x08048457 <+0>:     push   ebp
+0x08048458 <+1>:     mov    ebp,esp
+0x0804845a <+3>:     sub    esp,0x218
+0x08048460 <+9>:     mov    eax,ds:0x8049804
+0x08048465 <+14>:    mov    DWORD PTR [esp+0x8],eax
+0x08048469 <+18>:    mov    DWORD PTR [esp+0x4],0x200
+0x08048471 <+26>:    lea    eax,[ebp-0x208]
+0x08048477 <+32>:    mov    DWORD PTR [esp],eax
+0x0804847a <+35>:    call   0x8048350 <fgets@plt>
+0x0804847f <+40>:    lea    eax,[ebp-0x208]
+0x08048485 <+46>:    mov    DWORD PTR [esp],eax
+0x08048488 <+49>:    call   0x8048444 <p>
+0x0804848d <+54>:    mov    eax,ds:0x8049810
+0x08048492 <+59>:    cmp    eax,0x1025544
+0x08048497 <+64>:    jne    0x80484a5 <n+78>
+0x08048499 <+66>:    mov    DWORD PTR [esp],0x8048590
+0x080484a0 <+73>:    call   0x8048360 <system@plt>
+0x080484a5 <+78>:    leave
+0x080484a6 <+79>:    ret
 
 (gdb) x/s 0x8048590
 0x8048590:       "/bin/cat /home/user/level5/.pass"
